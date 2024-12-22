@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantalla 3</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="questionForm">
+        <label for="question">Pregunta:</label>
+        <input
+          type="text"
+          id="question"
+          placeholder="Escribe tu pregunta..."
+        /><br /><br />
+
+        <input type="radio" id="true" name="answer" value="Verdadero" />
+        <label for="true">Verdadero</label>
+        <input type="radio" id="false" name="answer" value="Falso" />
+        <label for="false">Falso</label><br /><br />
+
+        <label for="score">Puntuacion:</label>
+        <input
+          type="number"
+          id="score"
+          min="0"
+          max="9"
+          placeholder="0-9"
+        /><br /><br />
+
+        <button id="btnBack">Atras</button>
+        <button id="btnSave" disabled>Grabar</button>
+      </div>
+
+      <div id="questionList">
+        <p id="loadingText" class="loading">Cargando preguntas...</p>
+        <table id="questionsTable" style="display: none">
+          <thead>
+            <tr>
+              <th>PREGUNTA</th>
+              <th>RESPUESTA</th>
+              <th>PUNTUACION</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="../js/screen3.js" type="module"></script>
+  </body>
+</html>
